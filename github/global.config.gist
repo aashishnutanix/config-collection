@@ -1,0 +1,7 @@
+[user]
+        email = aashish.singhal@nutanix.com
+        name = Aashish Singhal
+[url "git@github.com"]
+        insteadOf = https://github.com/:
+[url "https://"]
+        insteadOf = git://

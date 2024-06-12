@@ -1,0 +1,90 @@
+# Warp Launch Configuration
+#
+#
+# Use this to start a certain configuration of windows, tabs, and panes
+# Open the launch configuration palette to access and open any launch configuration
+#
+# This file defines your launch configuration
+# More on how to do so here: 
+# https://docs.warp.dev/features/session-management/launch-configurations
+#
+# All launch configurations are stored under ~/.warp/launch_configurations/
+# Edit them anytime!
+# 
+# You can also add commands that run on-start for your launch configurations like so:
+# ---
+# name: Example with Command
+# windows:
+#  - tabs:
+#      - layout:
+#          cwd: /Users/warp-user/project
+#          commands:
+#            - exec: code .
+
+---
+name: All Services
+windows:
+  - tabs:
+      - layout:
+          split_direction: horizontal
+          panes:
+            - cwd: /Users/aashish.singhal/work/cpq-ui
+            commands:
+              - exec: git fetch --all
+            - cwd: /Users/aashish.singhal/work/cpq
+            commands:
+              - exec: git fetch --all
+        color: green
+  - tabs:
+      - layout:
+          split_direction: horizontal
+          panes:
+            - cwd: /Users/aashish.singhal/Downloads/redis-6.2.6
+            commands:
+              - exec: src/redis-server
+            - cwd: /Users/aashish.singhal/Downloads/elasticsearch-7.10.0/bin
+            commands:
+              - exec: ./elasticsearch
+  - tabs:
+      - title: CRM
+        layout:
+          cwd: /Users/aashish.singhal/work/cpq/crm
+          commands:
+            - exec: mvn spring-boot:run
+        color: green
+      - title: Search
+        layout:
+          cwd: /Users/aashish.singhal/work/cpq/search
+          commands:
+            - exec: mvn spring-boot:run
+        color: blue
+      - title: P&P
+        layout:
+          cwd: /Users/aashish.singhal/work/cpq/productandpricing
+          commands:
+            - exec: mvn spring-boot:run
+        color: red
+      - title: Quote
+        layout:
+          cwd: /Users/aashish.singhal/work/cpq/quote
+          commands:
+            - exec: mvn spring-boot:run
+        color: yellow
+      - title: Rules
+        layout:
+          cwd: /Users/aashish.singhal/work/cpq/rules
+          commands:
+            - exec: mvn spring-boot:run
+        color: purple
+      - title: Rules Engine
+        layout:
+          cwd: /Users/aashish.singhal/Downloads/wildfly-cpq-custom/bin
+          commands:
+            - exec: ./standalone.sh --server-config=standalone-full.xml -Dorg.kie.server.id=wildfly-kieserver -Dorg.kie.server.location=http://localhost:8080/kie-server/services/rest/server -Dorg.kie.server.controller=http://localhost:8080/kie-wb/rest/controller
+        color: cyan
+      - title: Rules-Collection
+        layout:
+          cwd: /Users/aashish.singhal/work/cpq/rules-collection
+          commands:
+            - exec: mvn spring-boot:run
+        color: gray
