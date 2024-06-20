@@ -22,22 +22,16 @@
 #            - exec: code .
 
 ---
-name: Git
+name: 1 Redis & Elastic Search
 windows:
   - tabs:
-      - title: GIT
+      - title: Redis- Elastic
         layout:
           split_direction: horizontal
           panes:
-            - split_direction: vertical
-              panes:
-                - cwd: /Users/aashish.singhal/work/cpq-ui
-                  commands:
-                    - exec: source ~/.zshrc
-                - cwd: /Users/aashish.singhal/work/cpq-ui
-                  commands:
-                    - exec: source ~/.zshrc
-            - cwd: /Users/aashish.singhal/work/cpq
+            - cwd: /Users/aashish.singhal/Downloads/redis-6.2.6
               commands:
-                - exec: source ~/.zshrc
-        color: green
+                - exec: src/redis-server
+            - cwd: /Users/aashish.singhal/Downloads/elasticsearch-7.10.0/bin
+              commands:
+                - exec: ./elasticsearch

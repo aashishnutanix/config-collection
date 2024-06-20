@@ -1,0 +1,67 @@
+
+---
+name: 4 Datagate Services
+windows:
+  - tabs:
+      - title: DG-CRM
+        layout:
+          cwd: /Users/aashish.singhal/work/xcelerate-datagate/crm
+          commands:
+            - exec: source ~/.zshrc
+            - exec: mvn spring-boot:run
+        color: green
+      - title: DG-P&P
+        layout:
+          cwd: /Users/aashish.singhal/work/xcelerate-datagate/product-pricing
+          commands:
+            - exec: source ~/.zshrc
+            - exec: mvn spring-boot:run
+        color: blue
+      - title: DG-Identity
+        layout:
+          cwd: /Users/aashish.singhal/work/xcelerate-datagate/identity
+          commands:
+            - exec: source ~/.zshrc
+            - exec: mvn spring-boot:run
+        color: yellow
+      # - title: Search
+      #   layout:
+      #     cwd: /Users/aashish.singhal/work/xcelerate-datagate
+      #     commands:
+      #       - exec: source ~/.zshrc
+      #       - exec: mvn spring-boot:run
+      #   color: blue
+      # - title: P&P
+      #   layout:
+      #     cwd: /Users/aashish.singhal/work/xcelerate-datagate
+      #     commands:
+      #       - exec: source ~/.zshrc
+      #       - exec: mvn spring-boot:run
+      #   color: red
+      # - title: Quote
+      #   layout:
+      #     cwd: /Users/aashish.singhal/work/xcelerate-datagate
+      #     commands:
+      #       - exec: source ~/.zshrc
+      #       - exec: mvn spring-boot:run
+      #   color: yellow
+      # - title: Rules
+      #   layout:
+      #     cwd: /Users/aashish.singhal/work/xcelerate-datagate
+      #     commands:
+      #       - exec: source ~/.zshrc
+      #       - exec: mvn spring-boot:run
+      #   color: magenta
+      # - title: Rules Engine
+      #   layout:
+      #     cwd: /Users/aashish.singhal/Downloads/wildfly-cpq-custom/bin
+      #     commands:
+      #       - exec: source ~/.zshrc
+      #       - exec: ./standalone.sh --server-config=standalone-full.xml -Dorg.kie.server.id=wildfly-kieserver -Dorg.kie.server.location=http://localhost:8080/kie-server/services/rest/server -Dorg.kie.server.controller=http://localhost:8080/kie-wb/rest/controller
+      #   color: cyan    
+      # - title: Rules-Collection
+      #   layout:
+      #     cwd: /Users/aashish.singhal/work/cpq/rules-collection
+      #     commands:
+      #       - exec: source ~/.zshrc
+      #       - exec: mvn clean install -P deploy-kie-container    

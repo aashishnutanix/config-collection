@@ -22,16 +22,27 @@
 #            - exec: code .
 
 ---
-name: Essential Services
+name: 2 Git
 windows:
   - tabs:
-      - title: Essentials
+      - title: GIT
         layout:
           split_direction: horizontal
           panes:
-            - cwd: /Users/aashish.singhal/Downloads/redis-6.2.6
-              commands:
-                - exec: src/redis-server
-            - cwd: /Users/aashish.singhal/Downloads/elasticsearch-7.10.0/bin
-              commands:
-                - exec: ./elasticsearch
+            - split_direction: vertical
+              panes:
+                - cwd: /Users/aashish.singhal/work/cpq-ui
+                  commands:
+                    - exec: source ~/.zshrc
+                - cwd: /Users/aashish.singhal/work/cpq-ui
+                  commands:
+                    - exec: source ~/.zshrc
+            - split_direction: vertical
+              panes:
+                - cwd: /Users/aashish.singhal/work/xcelerate-datagate
+                  commands:
+                    - exec: source ~/.zshrc
+                - cwd: /Users/aashish.singhal/work/cpq
+                  commands:
+                    - exec: source ~/.zshrc
+        color: green

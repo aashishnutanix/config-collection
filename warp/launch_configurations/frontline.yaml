@@ -1,66 +1,44 @@
-# Warp Launch Configuration
-#
-#
-# Use this to start a certain configuration of windows, tabs, and panes
-# Open the launch configuration palette to access and open any launch configuration
-#
-# This file defines your launch configuration
-# More on how to do so here: 
-# https://docs.warp.dev/features/session-management/launch-configurations
-#
-# All launch configurations are stored under ~/.warp/launch_configurations/
-# Edit them anytime!
-# 
-# You can also add commands that run on-start for your launch configurations like so:
-# ---
-# name: Example with Command
-# windows:
-#  - tabs:
-#      - layout:
-#          cwd: /Users/warp-user/project
-#          commands:
-#            - exec: code .
 
 ---
-name: Backend Services
+name: 3 Frontline Services
 windows:
   - tabs:
-      - title: UI
+      - title: FL-UI
         layout:
           cwd: /Users/aashish.singhal/work/cpq-ui
           commands:
             - exec: source ~/.zshrc
             - exec: npm run dev
         color: cyan
-      - title: CRM
+      - title: FL-CRM
         layout:
           cwd: /Users/aashish.singhal/work/cpq/crm
           commands:
             - exec: source ~/.zshrc
             - exec: mvn spring-boot:run
         color: green
-      - title: Search
+      - title: FL-Search
         layout:
           cwd: /Users/aashish.singhal/work/cpq/search
           commands:
             - exec: source ~/.zshrc
             - exec: mvn spring-boot:run
         color: blue
-      - title: P&P
+      - title: FL-P&P
         layout:
           cwd: /Users/aashish.singhal/work/cpq/productandpricing
           commands:
             - exec: source ~/.zshrc
             - exec: mvn spring-boot:run
         color: red
-      - title: Quote
+      - title: FL-Quote
         layout:
           cwd: /Users/aashish.singhal/work/cpq/quote
           commands:
             - exec: source ~/.zshrc
             - exec: mvn spring-boot:run
         color: yellow
-      - title: Rules
+      - title: FL-Rules
         layout:
           cwd: /Users/aashish.singhal/work/cpq/rules
           commands:

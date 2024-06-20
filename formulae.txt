@@ -1,0 +1,3 @@
+jenv
+nvm
+mongodb-community
