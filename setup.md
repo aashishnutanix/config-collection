@@ -104,4 +104,14 @@ curl -o ~/.warp/launch_configurations/launch_configurations https://raw.githubus
 Open WARP terminal and follow the on-screen instructions to complete the initial setup of Warp terminal. Once setup is complete, press Control + Command + L to launch the configuration panel and select the configuration you want to use.
 
 
->NOTE: please make sure to check the paths and commands to run in the `launch-config.yml` files so that you do not run into any issues.
+>NOTE: please make sure to check the paths and commands to run in the `launch-config.yml` files so that you do not run into any issues.## Step 11: Organize Work Git Repositories
+
+It is recommended to organize all your work Git repositories inside a `work` folder at the root. Here is an example of how you can structure it:
+
+```bash
+./work
+|-- cpq
+|-- cpq-ui
+|-- document-server
+|-- xcelerate-datagate
+```
